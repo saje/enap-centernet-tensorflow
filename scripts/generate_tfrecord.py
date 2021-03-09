@@ -14,7 +14,8 @@ from __future__ import absolute_import
 import os
 import io
 import pandas as pd
-import tensorflow as tf
+#import tensorflow_ as tf
+import tensorflow.compat.v1 as tf
 
 from PIL import Image
 from object_detection.utils import dataset_util
@@ -29,11 +30,56 @@ FLAGS = flags.FLAGS
 
 # TO-DO replace this with label map
 def class_text_to_int(row_label):
-    if row_label == 'raccoon':
+    if row_label == 'Animal':
         return 1
+    elif row_label == 'Basural':
+        return 2
+    elif row_label == 'Bus':
+        return 3
+    elif row_label == 'Camión':
+        return 4
+    elif row_label == 'Chasis':
+        return 5
+    elif row_label == 'Cilindro':
+        return 6
+    elif row_label == 'Entrada':
+        return 7
+    elif row_label == 'Escombro':
+        return 8
+    elif row_label == 'Estructura':
+        return 9
+    elif row_label == 'GHorquilla':
+        return 10
+    elif row_label == 'Juegos':
+        return 11
+    elif row_label == 'Maquinaria':
+        return 12
+    elif row_label == 'MConstrucción':
+        return 13
+    elif row_label == 'PalletCaja':
+        return 14
+    elif row_label == 'Persona':
+        return 15
+    elif row_label == 'Pickup':
+        return 16
+    elif row_label == 'Piscina':
+        return 17
+    elif row_label == 'Poste':
+        return 18
+    elif row_label == 'SAdvertencia':
+        return 19
+    elif row_label == 'Tractor':
+        return 20
+    elif row_label == 'Troncos':
+        return 21
+    elif row_label == 'Tuberia':
+        return 22
+    elif row_label == 'Vehículo':
+        return 23
+    elif row_label == 'Zanja':
+        return 24
     else:
         None
-
 
 def split(df, group):
     data = namedtuple('data', ['filename', 'object'])
