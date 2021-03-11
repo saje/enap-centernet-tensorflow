@@ -36,7 +36,7 @@ def class_text_to_int(row_label):
         return 2
     elif row_label == 'Bus':
         return 3
-    elif row_label == 'Camión':
+    elif row_label == 'Camion':
         return 4
     elif row_label == 'Chasis':
         return 5
@@ -74,7 +74,7 @@ def class_text_to_int(row_label):
         return 21
     elif row_label == 'Tuberia':
         return 22
-    elif row_label == 'Vehículo':
+    elif row_label == 'Vehiculo':
         return 23
     elif row_label == 'Zanja':
         return 24

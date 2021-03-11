@@ -15,7 +15,7 @@ item {
 
 item {
     id: 4
-    name: 'Camión'
+    name: 'Camion'
 }
 
 item {
@@ -110,7 +110,7 @@ item {
 
 item {
     id: 23
-    name: 'Vehículo'
+    name: 'Vehiculo'
 }
 
 item {
