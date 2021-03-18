@@ -27,6 +27,7 @@ flags.DEFINE_string('output_path', '', 'Path to output TFRecord')
 flags.DEFINE_string('image_dir', '', 'Path to images')
 FLAGS = flags.FLAGS
 
+#python scripts/generate_tfrecord.py --csv_input=annotations/train_labels.csv   --output_path=annotations/train.record --image_dir=images/train
 
 # TO-DO replace this with label map
 def class_text_to_int(row_label):
@@ -54,7 +55,7 @@ def class_text_to_int(row_label):
         return 11
     elif row_label == 'Maquinaria':
         return 12
-    elif row_label == 'MConstrucción':
+    elif row_label == 'MConstruccion':
         return 13
     elif row_label == 'PalletCaja':
         return 14
@@ -79,7 +80,8 @@ def class_text_to_int(row_label):
     elif row_label == 'Zanja':
         return 24
     else:
-        None
+        print(row_label)
+        return None
 
 def split(df, group):
     data = namedtuple('data', ['filename', 'object'])
